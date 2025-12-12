@@ -1,10 +1,12 @@
-﻿using dataaccess.Entities.Enums;
+﻿using System.ComponentModel.DataAnnotations;
+using dataaccess.Entities.Enums;
 using Sieve.Attributes;
 
 namespace dataaccess.Entities;
 
 public class User
 {
+    [Key]
     public String UserID { get; set; }
     
     [Sieve(CanFilter = true, CanSort = true)]

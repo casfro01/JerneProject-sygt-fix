@@ -14,7 +14,9 @@ public class Transaction
     
     [Sieve(CanSort = true, CanFilter = true)]
     public Decimal Amount { get; set; }
-    public String UserID { get; set; }
+    
+    [Sieve(CanSort = true, CanFilter = true)]
+    public User User { get; set; }
 
     [Sieve(CanSort = true, CanFilter = true)]
     public bool Pending { get; set; }
